@@ -3,11 +3,11 @@ project(payload_visualization_and_metrics)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
-  add_compile_options(-Wno-sign-compare)  
-  add_compile_options(-Wno-type-limits)   
+  add_compile_options(-Wno-sign-compare)
+  add_compile_options(-Wno-type-limits)
 
   endif()
-  
+
 include_directories(include)
 
 # find dependencies

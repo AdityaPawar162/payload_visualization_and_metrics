@@ -25,7 +25,6 @@ public:
   PinocchioTiagoNode();
 
 private:
-
   /// @brief Check for collisions between two links
   void checkCollisions(const std::string & link1, const std::string & link2);
 

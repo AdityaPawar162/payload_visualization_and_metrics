@@ -216,7 +216,6 @@ void PinocchioTiagoNode::checkCollisions(const std::string & link1, const std::s
   }
 }
 
-
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
