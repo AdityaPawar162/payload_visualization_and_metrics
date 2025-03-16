@@ -56,7 +56,7 @@ source ~/ros2_ws/install/setup.bash
 
 ## Usage
 
-1. Start a ROS 2 node that publishes the robot's URDF on the `robot_description` topic. For example, with TIAGo:
+1. Start a ROS 2 node that publishes the robot's URDF on the `robot_description` topic. For example, with [TIAGo](https://github.com/pal-robotics/tiago_robot):
 
 ```sh
 ros2 launch tiago_description show.launch.py
@@ -93,12 +93,3 @@ When a URDF is recieved via the `robot_description` topic:
 * `performForwardKinematics()`: Computes the forward kinematics and retrieves the end effector position and orientation
 * `getJacobian()`: Computes the Jacobian matrix at the specified frame
 * `checkCollisions()`: Checks for collisions between specified links
-
-### Approach to Solution
-The implementation follows these principles:
-
-1. **Modular Design**: The code is structured into separate methods for each operation, making it easy to understand and extend.
-2. **Error Handling**: Each method includes checks to ensure the model is properly created before performing operations.
-3. **Comprehensive Logging**: The node provides detailed logging to help users understand what's happening during execution.
-4. **Flexibility**: Although designed for TIAGo, the code can be easily adapted for other robots by changing the frame names and link specifications.
-5. **Integration with ROS 2**: The node seamlessly integrates with the ROS 2 ecosystem, subscribing to the standard robot_description topic.
