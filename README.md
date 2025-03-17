@@ -67,7 +67,7 @@ ros2 run payload_visualization_and_metrics pinocchio_task
 
 ## Implementation Details
 
-![alt text](https://github.com/AdityaPawar162/payload_visualization_and_metrics/blob/main/resources/flow_diagram.png)
+![Implementation Details](https://github.com/AdityaPawar162/payload_visualization_and_metrics/blob/main/resources/flow_diagram.png?raw=true "Flow Diagram")
 
 
 
