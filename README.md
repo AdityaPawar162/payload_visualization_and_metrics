@@ -79,7 +79,7 @@ The main node is implemented in the `PinocchioTiagoNode` class, which inherits f
 * Sets up the necessary Pinocchio data structures
 
 ### Robot Description Processing
-When a URDF is recieved via the `robot_description` topic:
+When a URDF is received via the `robot_description` topic:
 1. Saves the URDF to a temporary file
 2. Creates a Pinocchio model from the URDF
 3. Initializes the collision model
