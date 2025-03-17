@@ -16,20 +16,9 @@ The implementation focuses on the TIAGo robot model but can be adapted for other
 * Pinocchio
 * Eigen3
 
-## Installation
-
-### Install ROS2
-Follow the official ROS 2 installation for your platform:
-[ROS2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
-
-### Install Pinocchio
-
-```sh
-sudo apt install ros-$ROS_DISTRO-pinocchio
-```
 
 ## Building the package
-1. Create a ROS 2 workspace(if you don't have one alaready):
+1. Create a ROS 2 workspace(if you don't have one already):
 ```sh
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
@@ -41,10 +30,18 @@ cd ~/ros2_ws/src
 git clone https://github.com/AdityaPawar162/payload_visualization_and_metrics.git
 ```
 
+3. Install Dependencies:
+
+```sh
+rosdep update --rosdistro=$ROS_DISTRO
+sudo apt-get update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
 3. Build the package:
 
 ```sh
-cd ~/ros2_ws
+. /opt/ros/${ROS_DISTRO}/setup.sh
 colcon build --packages-select payload_visualization_and_metrics
 ```
 
@@ -69,6 +66,10 @@ ros2 run payload_visualization_and_metrics pinocchio_task
 ```
 
 ## Implementation Details
+
+![alt text](https://github.com/AdityaPawar162/payload_visualization_and_metrics/blob/main/resources/flow_diagram.png)
+
+
 
 ### Node Structure
 The main node is implemented in the `PinocchioTiagoNode` class, which inherits from `rclcpp::Node`. Here's a breakdown of its functionality
