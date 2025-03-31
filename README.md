@@ -53,16 +53,15 @@ source ~/ros2_ws/install/setup.bash
 
 ## Usage
 
-1. Start a ROS 2 node that publishes the robot's URDF on the `robot_description` topic. For example, with [TIAGo](https://github.com/pal-robotics/tiago_robot):
-
-```sh
-ros2 launch tiago_description show.launch.py
-```
-
-2. Run the payload_visualization_and_metrics node:
+1. Run the payload_visualization_and_metrics node:
 
 ```sh
 ros2 run payload_visualization_and_metrics pinocchio_task
+```
+2. Start a ROS 2 node that publishes the robot's URDF on the `robot_description` topic. For example, with [TIAGo](https://github.com/pal-robotics/tiago_robot):
+
+```sh
+ros2 launch tiago_description show.launch.py
 ```
 
 ## Implementation Details
