@@ -3,9 +3,9 @@
 <package format="3">
   <name>payload_visualization_and_metrics</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Package demonstratating the use of the Pinocchio rigid body dynamics library to perform various operations on a robot model.</description>
   <maintainer email="adityavpawar2003@gmail.com">adi</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
