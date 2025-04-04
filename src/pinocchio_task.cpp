@@ -135,17 +135,16 @@ void PinocchioTiagoNode::getJacobian()
   // Print the Jacobian
   RCLCPP_INFO(
     this->get_logger(),
-    "Jacobian:\n%f %f %f %f %f %f\n%f %f %f %f %f %f\n%f %f %f %f %f %f\n%f %f %f %f %f %f\n%f %f "
-    "%f %f %f %f\n%f %f %f %f %f %f",
-    arm_7_link_J(0, 0), arm_7_link_J(0, 1), arm_7_link_J(0, 2), arm_7_link_J(0, 3),
-    arm_7_link_J(0, 4), arm_7_link_J(0, 5), arm_7_link_J(1, 0), arm_7_link_J(1, 1),
-    arm_7_link_J(1, 2), arm_7_link_J(1, 3), arm_7_link_J(1, 4), arm_7_link_J(1, 5),
-    arm_7_link_J(2, 0), arm_7_link_J(2, 1), arm_7_link_J(2, 2), arm_7_link_J(2, 3),
-    arm_7_link_J(2, 4), arm_7_link_J(2, 5), arm_7_link_J(3, 0), arm_7_link_J(3, 1),
-    arm_7_link_J(3, 2), arm_7_link_J(3, 3), arm_7_link_J(3, 4), arm_7_link_J(3, 5),
-    arm_7_link_J(4, 0), arm_7_link_J(4, 1), arm_7_link_J(4, 2), arm_7_link_J(4, 3),
-    arm_7_link_J(4, 4), arm_7_link_J(4, 5), arm_7_link_J(5, 0), arm_7_link_J(5, 1),
-    arm_7_link_J(5, 2), arm_7_link_J(5, 3), arm_7_link_J(5, 4), arm_7_link_J(5, 5));
+    "Jacobian:\n%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n"
+    "%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n"
+    "%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n%f %f %f %f %f %f %f %f %f %f %f %f %f %f \n",
+    arm_7_link_J(0, 0), arm_7_link_J(0, 1), arm_7_link_J(0, 2), arm_7_link_J(0, 3),arm_7_link_J(0, 4), arm_7_link_J(0, 5),arm_7_link_J(0, 6), arm_7_link_J(0, 7), arm_7_link_J(0, 8), arm_7_link_J(0, 9),arm_7_link_J(0, 10), arm_7_link_J(0, 11), arm_7_link_J(0,12),arm_7_link_J(0,13),
+    arm_7_link_J(1, 0), arm_7_link_J(1, 1),arm_7_link_J(1, 2), arm_7_link_J(1, 3), arm_7_link_J(1, 4), arm_7_link_J(1, 5),arm_7_link_J(1, 6), arm_7_link_J(1, 7),arm_7_link_J(1, 8), arm_7_link_J(1, 9), arm_7_link_J(1, 10), arm_7_link_J(1, 11), arm_7_link_J(1,12),arm_7_link_J(1,13),
+    arm_7_link_J(2, 0), arm_7_link_J(2, 1), arm_7_link_J(2, 2), arm_7_link_J(2, 3),arm_7_link_J(2, 4), arm_7_link_J(2, 5),arm_7_link_J(2, 6), arm_7_link_J(2, 7), arm_7_link_J(2, 8), arm_7_link_J(2, 9), arm_7_link_J(2, 10), arm_7_link_J(2, 11), arm_7_link_J(2,12),arm_7_link_J(2,13),
+    arm_7_link_J(3, 0), arm_7_link_J(3, 1),arm_7_link_J(3, 2), arm_7_link_J(3, 3), arm_7_link_J(3, 4), arm_7_link_J(3, 5),arm_7_link_J(3, 6), arm_7_link_J(3, 7), arm_7_link_J(3, 8), arm_7_link_J(3, 9), arm_7_link_J(3, 10), arm_7_link_J(3, 11), arm_7_link_J(3,12),arm_7_link_J(3,13),
+    arm_7_link_J(4, 0), arm_7_link_J(4, 1), arm_7_link_J(4, 2), arm_7_link_J(4, 3),arm_7_link_J(4, 4), arm_7_link_J(4, 5),arm_7_link_J(4, 6), arm_7_link_J(4, 7), arm_7_link_J(4, 8), arm_7_link_J(4, 9), arm_7_link_J(4, 10), arm_7_link_J(4, 11), arm_7_link_J(4,12),arm_7_link_J(4,13),
+    arm_7_link_J(5, 0), arm_7_link_J(5, 1),arm_7_link_J(5, 2), arm_7_link_J(5, 3), arm_7_link_J(5, 4), arm_7_link_J(5, 5),arm_7_link_J(5, 6), arm_7_link_J(5, 7), arm_7_link_J(5, 8), arm_7_link_J(5, 9), arm_7_link_J(5, 10), arm_7_link_J(5, 11), arm_7_link_J(5,12),arm_7_link_J(5,13));
+
 }
 
 /**
