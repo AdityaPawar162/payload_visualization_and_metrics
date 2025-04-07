@@ -56,7 +56,7 @@ source ~/ros2_ws/install/setup.bash
 1. Run the payload_visualization_and_metrics node:
 
 ```sh
-ros2 run payload_visualization_and_metrics pinocchio_task
+ros2 run gsoc_payload_visualization_and_metrics_ payload_visualization_and_metrics
 ```
 2. Start a ROS 2 node that publishes the robot's URDF on the `robot_description` topic. For example, with [TIAGo](https://github.com/pal-robotics/tiago_robot):
 
