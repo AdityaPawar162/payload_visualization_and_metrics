@@ -2,29 +2,29 @@
 #define PAYLOAD_VISUALIZATION_AND_METRICS_HPP_
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
+#include "std_msgs/msg/string.hpp"
 
-#include <pinocchio/fwd.hpp> // Forward declarations
-#include <pinocchio/multibody/model.hpp>
+#include <pinocchio/algorithm/kinematics.hpp>
+#include <pinocchio/fwd.hpp>  // Forward declarations
 #include <pinocchio/multibody/data.hpp>
+#include <pinocchio/multibody/geometry.hpp>
+#include <pinocchio/multibody/model.hpp>
 #include "pinocchio/algorithm/frames.hpp"
-#include "pinocchio/parsers/urdf.hpp"
 #include "pinocchio/algorithm/geometry.hpp"
 #include "pinocchio/algorithm/jacobian.hpp"
-#include <pinocchio/algorithm/kinematics.hpp>
 #include "pinocchio/algorithm/joint-configuration.hpp"
 #include "pinocchio/algorithm/rnea.hpp"
-#include <pinocchio/multibody/geometry.hpp>
+#include "pinocchio/parsers/urdf.hpp"
 
+#include <cmath>
 #include <fstream>
 #include <iostream>
+#include <limits>  // Required for numeric_limits
 #include <memory>
 #include <string>
-#include <vector>
 #include <unordered_map>
-#include <limits> // Required for numeric_limits
-#include <cmath> 
+#include <vector>
 
 const double GRAVITY_ACCELERATION = 9.80665;
 
@@ -40,7 +40,7 @@ public:
 private:
   /// @brief Calculate max downward force
   bool calculateMaxDownwardForce();
-  
+
   /// @brief Calculate Torque and Jacobian
   bool getGravityTorques();
 
@@ -79,7 +79,7 @@ private:
 
   /// @brief Torque vector
   Eigen::VectorXd tau_gravity_ = Eigen::VectorXd::Zero(model_.nv);
-  
+
   /// @brief Jacobian matrix
   Eigen::MatrixXd J;
 
@@ -94,9 +94,9 @@ private:
 
   /// @brief Dimension of the velocity vector space
   int nv_;
-  
+
   /// @brief Maximum payload mass
-  double latest_max_payload_mass_ = 0.0; // Store the result
+  double latest_max_payload_mass_ = 0.0;  // Store the result
 
   /// @brief Flag indicating if the model was created
   bool model_created_{false};
