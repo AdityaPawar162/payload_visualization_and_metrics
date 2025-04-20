@@ -63,7 +63,7 @@ ros2 run payload_visualization_and_metrics pinocchio_task
 ```sh
 ros2 launch tiago_description show.launch.py
 ```
-
+_Note: You might need to retry launching `tiago_description` a couple of times to ensure the URDF gets published properly._
 ## Implementation Details
 
 ![Implementation Details](https://github.com/AdityaPawar162/payload_visualization_and_metrics/blob/main/resources/flow_diagram.png?raw=true "Flow Diagram")
@@ -93,3 +93,6 @@ When a URDF is received via the `robot_description` topic:
 * `performForwardKinematics()`: Computes the forward kinematics and retrieves the end effector position and orientation
 * `getJacobian()`: Computes the Jacobian matrix at the specified frame
 * `checkCollisions()`: Checks for collisions between specified links
+
+### YouTube Video
+* Step-by-Step Walkthrough - [Watch here](https://youtu.be/CGSvv7kMnWw) 
